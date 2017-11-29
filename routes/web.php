@@ -11,20 +11,31 @@
 |
 */
 
-Route::get('/', function () {
-    return "hello from home";
-});
+$controller  = function () {
+    return view('welcome');
+};
 
-Route::get('/about', function () {
-    return "hello from teh other side";
-});
+Route::get('/', $controller);
 
-//belajar route parameter - untuk custom page berdasarkan routenya
-//? untuk default function
-Route::get('/profile/{username?}', function ($username = "anonymous") {
-    return "This is profile page for user:".$username;
-});
+// Membuat controller menggunakan class
+Route::get('/welcome2', "UserController@welcome");
 
-Route::get('/profile/{username}/comment/{id}', function ($username,$id) {
-    return "comment ID: ".$id. " for user: ".$username;
-});
+Route::get('/about', "UserController@about");
+
+Route::get('/contact', "UserController@contact");
+
+Route::get('/product/discount', "ProductController@discount");
+
+//
+// Route::get('/about', function () {
+//     return "This is about page";
+// });
+//
+// // Belajar Route Parameter
+// Route::get('/profile/{username?}', function ($username="") {
+//     return "This is profile page for user: ".$username;
+// });
+//
+// Route::get('/profile/{username}/comment/{id}', function ($username, $id) {
+//     return "Comment ID: ".$id. " for user ".$username;
+// });
