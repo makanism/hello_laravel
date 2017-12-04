@@ -13,7 +13,7 @@ return [
     |
     */
 
-    'default' => env('DB_CONNECTION', 'mysql'),
+    'default' => 'inibisaapaaja',
 
     /*
     |--------------------------------------------------------------------------
@@ -77,7 +77,21 @@ return [
             'charset' => 'utf8',
             'prefix' => '',
         ],
-
+        
+        'inibisaapaaja' => [
+            'driver' => 'mysql',
+            'host' => 'localhost',
+            'port' => env('DB_PORT', '3306'),
+            'database' => 'my_online_store',
+            'username' => 'root',
+            'password' => '',
+            'unix_socket' => env('DB_SOCKET', ''),
+            'charset' => 'utf8mb4',
+            'collation' => 'utf8mb4_unicode_ci',
+            'prefix' => '',
+            'strict' => true,
+            'engine' => null,
+        ],
     ],
 
     /*

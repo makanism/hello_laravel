@@ -25,7 +25,11 @@ Route::get('/about', "UserController@about");
 Route::get('/contact', "UserController@contact");
 
 Route::get('/product/discount', "ProductController@discount");
+Route::get('/product/detail', "ProductController@detail");
 
+Route::get('/products', "ProductController@index");
+Route::get('/products/add', "ProductController@add");
+Route::post('/products/add', "ProductController@add");
 //
 // Route::get('/about', function () {
 //     return "This is about page";
