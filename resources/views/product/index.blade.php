@@ -15,6 +15,7 @@
                     <th>name</th>
                     <th>price</th>
                     <th>rating</th>
+                    <<th>Action</th>
                 </tr>
                 </thead>
                 @foreach($products as $product)
@@ -23,6 +24,7 @@
                     <td>{{$product->name}}</td>
                     <td>{{$product->price}}</td>
                     <td>{{$product->rating}}</td>
+                    <td><a href="/products/detail/{{$product->id}}" class="btn btn-default btn-xs">View</a></td>                
                 </tr>
                 @endforeach
             </table>

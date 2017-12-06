@@ -30,6 +30,13 @@ Route::get('/product/detail', "ProductController@detail");
 Route::get('/products', "ProductController@index");
 Route::get('/products/add', "ProductController@add");
 Route::post('/products/add', "ProductController@add");
+
+Route::get('/products/detail/{product_id}', "ProductController@detail");
+
+Route::get('/products/edit/{product_edit}', "ProductController@edit");
+Route::post('/products/edit/{product_edit}', "ProductController@edit");
+Route::post('/products/delete', "ProductController@delete");
+
 //
 // Route::get('/about', function () {
 //     return "This is about page";
