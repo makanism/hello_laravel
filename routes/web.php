@@ -37,6 +37,10 @@ Route::get('/products/edit/{product_edit}', "ProductController@edit");
 Route::post('/products/edit/{product_edit}', "ProductController@edit");
 Route::post('/products/delete', "ProductController@delete");
 
+Route::get('/media',"MediaController@index");
+Route::get('/media/upload',"MediaController@upload");
+Route::post('/media/upload',"MediaController@upload");
+
 //
 // Route::get('/about', function () {
 //     return "This is about page";
